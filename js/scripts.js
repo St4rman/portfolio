@@ -32,3 +32,36 @@ window.addEventListener('DOMContentLoaded', event => {
     });
 
 });
+
+var panel  = document.getElementById("main-panel")
+var loadpanel = document.getElementById("load-panel")
+// setTimeout(fade(loadpanel),10000)
+setTimeout(unfade(panel), 2000)
+
+function fade(element) {
+    var op = 1; 
+    var timer = setInterval(function () {
+        if (op <= 0.1){
+            clearInterval(timer);
+            element.style.display = 'none';
+        }
+        element.style.opacity = op;
+        element.style.filter = 'alpha(opacity=' + op * 100 + ")";
+        op -= op * 0.1;
+    }, 50);
+}
+
+function unfade(element) {
+    var op = 0.1;
+    var timer = setInterval(function() {
+        if (op>=1){
+            clearInterval(timer);
+        }
+        element.style.opacity = op;
+        element.style.filter = 'alpha(opacity=' + op * 100 + ")";
+        op += op * 0.1;
+    }, 10);
+}
+
+
+
