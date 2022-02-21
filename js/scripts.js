@@ -64,4 +64,28 @@ function unfade(element) {
 }
 
 
+function updateText(){
+
+    let delay = 200;
+    
+        let element = document.getElementById("flavor");
+    
+          element.innerHTML = "Gameplay Programmer."
+            .split("")
+            .map(letter => {
+              console.log(letter);
+              return `<span>` + letter + `</span>`;
+            })
+            .join("");
+    
+          Array.from(element.children).forEach((span, index) => {
+            setTimeout(() => {
+              span.classList.add("wavy");
+            }, index * 60 + delay);
+          });
+    
+    }
+    
+updateText();
+
 

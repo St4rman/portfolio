@@ -11303,11 +11303,12 @@ html {
 
 header {
   padding-top: 9.5rem;
-  padding-bottom: 6rem;
+  padding-bottom: 0rem;
+  min-height: 100vh;
 }
 
 section {
-  padding-top: 9rem;
+  padding-top: 7rem;
   padding-bottom: 9rem;
 }
 
@@ -11347,7 +11348,37 @@ section {
 }
 
 .desc{
-  text-align: right;
+  text-align: justify;
 }
 
 
+.icons{
+  padding-bottom: 5rem;
+}
+
+.wavy {
+  animation-name: wavy;
+  animation-duration: 1.3s;
+  animation-timing-function: ease;
+  animation-iteration-count: infinite;
+  position: relative;
+  top: 0;
+  left: 0;
+}
+@keyframes wavy {
+  0% {
+    top: -5px;
+  }
+  50% {
+    top: -0px;
+  }
+  100% {
+    top: -5px;
+  }
+}
+
+::selection {
+
+  background: rgba(243,115,9);
+
+}
