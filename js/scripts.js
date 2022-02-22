@@ -88,4 +88,7 @@ function updateText(){
     
 updateText();
 
+function close_window(){
+    window.close();
+}
 

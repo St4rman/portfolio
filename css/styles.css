@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
 /*!
 * Start Bootstrap - Scrolling Nav v5.0.4 (https://startbootstrap.com/template/scrolling-nav)
 * Copyright 2013-2021 Start Bootstrap
@@ -68,6 +69,9 @@
 
   --cust-bg-grad:  linear-gradient(180deg, rgba(104,22,116) 0%, rgba(235,212,212,1) 100%);
   --cust-bg-color: rgb(98, 37, 106);
+
+  --nav-gradient:linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,255,188,1) 0%, rgba(201,57,200,1) 100%);
+  --nav-bone: #909090;
   
 }
 
@@ -3950,7 +3954,7 @@ textarea.form-control-lg {
 
 .nav-link {
   display: block;
-  padding: 0.5rem 1rem;
+  /* padding: 0.5rem 1rem; */
   color: #0d6efd;
   text-decoration: none;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
@@ -4007,7 +4011,7 @@ textarea.form-control-lg {
 }
 .nav-pills .nav-link.active,
 .nav-pills .show > .nav-link {
-  color: #fff;
+  color: black;
   background-color: #0d6efd;
 }
 
@@ -4044,6 +4048,8 @@ textarea.form-control-lg {
   justify-content: space-between;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
+
+  border-top: solid black 3px;
 }
 .navbar > .container,
 .navbar > .container-fluid,
@@ -7853,7 +7859,8 @@ textarea.form-control-lg {
 
 .bg-dark {
   --bs-bg-opacity: 1;
-  background-color: rgba(var(--bs-dark-rgb), var(--bs-bg-opacity)) !important;
+  /* background-image: var(--nav-gradient) !important; */
+  background-color: var(--nav-bone);
 }
 
 .bg-black {
@@ -11353,8 +11360,8 @@ section {
 
 
 .icons{
-  padding-bottom: 5rem;
-}
+  padding-bottom: 1rem;
+} 
 
 .wavy {
   animation-name: wavy;
@@ -11382,3 +11389,27 @@ section {
   background: rgba(243,115,9);
 
 }
+
+.nav-header{
+  background-image: var(--nav-gradient);
+  border: solid white 3px;
+  box-shadow: 20px 8px 5px 1px rgba(0, 0, 0, 0.2)
+}
+
+.star-black{
+  color: black !important;
+  font-family: 'VT323', monospace !important;
+  font-size: larger;
+}
+
+.star-cen{
+  text-align: center;
+}
+
+.star-icon{
+  min-width: 26px;
+  min-height: 26px; 
+  background-color: #999999;
+  box-shadow: inset -2px -2px rgba(0,0,0,0.8), inset 2px 2px rgba(255,255,255,0.9);
+}
+
