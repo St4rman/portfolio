@@ -64,13 +64,13 @@ function unfade(element) {
 }
 
 
-function updateText(){
+function updateText(text, flav){
 
     let delay = 200;
     
-        let element = document.getElementById("flavor");
+        let element = document.getElementById(flav);
     
-          element.innerHTML = "Gameplay Programmer."
+          element.innerHTML = text
             .split("")
             .map(letter => {
               console.log(letter);
@@ -86,7 +86,8 @@ function updateText(){
     
     }
     
-updateText();
+updateText("Gameplay Programmer", "flavor");
+updateText("yours truly.", "yourstruly");
 
 function close_window(){
     window.close();
